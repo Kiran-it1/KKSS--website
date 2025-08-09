@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>KKSS — Events & Sound</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- HEADER / NAV -->
+  <header id="siteHeader" class="header">
+    <div class="brand" aria-hidden="false">
+      <div class="brand-dot" aria-hidden="true"></div>
+      <span class="brand-text">KKSS</span>
+    </div>
+
+    <button id="burger" class="burger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav id="mainNav" class="nav" role="navigation" aria-label="Main">
+      <a class="nav-link" data-target="home" href="#home">Home</a>
+      <a class="nav-link" data-target="about" href="#about">About</a>
+      <a class="nav-link" data-target="services" href="#services">Services</a>
+      <a class="nav-link" data-target="reviews" href="#reviews">Reviews</a>
+      <a class="nav-link" data-target="contact" href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- MAIN: full-height sections with scroll-snap -->
+  <main id="main" class="main">
+
+    <section id="home" class="section">
+      <div class="section-inner">
+        <h1 class="title">Welcome to <span class="accent">KKSS</span></h1>
+        <p class="lead">We create unforgettable moments — sound, lights, decorations, and full event orchestration with pride and precision.</p>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="section-inner card glass">
+        <h2>About Us</h2>
+        <p>KKSS is a premier event services company rooted in Gajendragad and serving across regions. For over a decade we blend tradition with modern production values — from intimate gatherings to grand weddings and corporate launches.</p>
+        <ul class="about-list">
+          <li><strong>Local expertise:</strong> Deep knowledge of regional tastes & logistics.</li>
+          <li><strong>End-to-end</strong> planning — décor, AV, catering, staffing.</li>
+          <li><strong>On-site engineers:</strong> Experienced sound & lighting crews.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="services" class="section">
+      <div class="section-inner">
+        <h2>Our Services</h2>
+
+        <div class="service-list">
+          <!-- service card: 1 -->
+          <article class="service-card">
+            <h3>Wedding Planning</h3>
+            <p class="muted">Tailored ceremonies, mandaps, guest experience & timeline management.</p>
+            <button class="btn" data-service="wedding">View Details</button>
+          </article>
+
+          <!-- 2 -->
+          <article class="service-card">
+            <h3>Corporate Events</h3>
+            <p class="muted">Conferences, product launches, gala dinners with flawless execution.</p>
+            <button class="btn" data-service="corporate">View Details</button>
+          </article>
+
+          <!-- 3 -->
+          <article class="service-card">
+            <h3>Sound & Lighting</h3>
+            <p class="muted">High-power PA systems, mixers, lights, and skilled audio engineers.</p>
+            <button class="btn" data-service="sound">View Details</button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="reviews" class="section">
+      <div class="section-inner card glass">
+        <h2>Client Reviews</h2>
+        <div class="reviews-grid">
+          <blockquote class="review">"KKSS made our wedding magical — professional & heartful." <footer>— Priya & Arjun</footer></blockquote>
+          <blockquote class="review">"Great sound and punctual team — made our launch day perfect." <footer>— R. Mehta</footer></blockquote>
+          <blockquote class="review">"Exceptional decor — guests loved it!" <footer>— S. Kapoor</footer></blockquote>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="section-inner contact-grid">
+        <div class="contact-card glass">
+          <h2>Contact Info</h2>
+          <p class="big">KKSS Events Pvt. Ltd.</p>
+          <p>123 Celebration Street, Bangalore, India</p>
+          <p>Email: <a href="mailto:kkss.events@gmail.com">kkss.events@gmail.com</a></p>
+          <p>Phone: <a href="tel:+919876543210">+91 98765 43210</a></p>
+        </div>
+
+        <form id="contactForm" class="contact-card form glass" aria-label="Contact form">
+          <h2>Get in touch</h2>
+          <input name="name" placeholder="Your name" required>
+          <input name="email" type="email" placeholder="Your email" required>
+          <textarea name="message" rows="5" placeholder="Tell us about your event" required></textarea>
+          <div class="form-row">
+            <button type="submit" class="btn">Send Message</button>
+          </div>
+          <p class="form-note">We will respond within 24 hours. This form is demo-only (no backend).</p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- DETAILS MODAL (reused for all services) -->
+  <div id="modal" class="modal" aria-hidden="true">
+    <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button id="modalClose" class="modal-close" aria-label="Close">&times;</button>
+      <h3 id="modalTitle">Service Details</h3>
+      <div id="modalBody" class="modal-body"></div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> KKSS — All rights reserved</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
